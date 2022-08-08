@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #7a5cff 0%, #3cd644 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding-top: 20px;
+  user-select: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.react-calculator {
+    position: relative;
+    margin: 0 auto;
+    width: 320px;
+    background-color: #292f36;  
+    box-shadow: 0 19px 38px rgba(19, 19, 19, .24),
+  0 15px 12px rgba(19, 19, 19, .12);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+button {
+  outline: none;
+  border: 0;
+  padding: 16px;
+  font-size: 20px;
+  line-height: 1;
+  background-color: transparent;
+  color: #ffce5c;
+  transition: all 300ms;
+  border: 1px solid #0001;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  color: #00a3f5;
+  border: 1px solid #ffce5c22;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.result {
+  position: relative;
+  width: 320px;
+  height: 80px;
+  padding: 8px;
+  overflow: hidden;
+  background-color: rgba(19, 19, 19, .64);
+  font-size: 32px;
+  line-height: 2;
+  color: #60d63c;
+  text-align: right;
+  direction: rtl;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.functions button, .math-operations button {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  color: #d63c6b
+}
+
+.functions button:hover, 
+.math-operations button:hover {
+  color: #b696a0;
+}
+
+.numbers {
+  width: 240px;
+  float: left;
+}
+
+.numbers button {
+  display: block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+.numbers button:last-child {
+  width: 100%;
+}
+
+.functions {
+  float: left;
+  width: 240px;
 }
