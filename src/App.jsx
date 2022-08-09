@@ -1,7 +1,8 @@
-import Result from './components/Result'
 import Button from './components/Button';
-import './App.css'
+import Functions from './components/Functions'
 import MathOperation from './components/MathOperation'
+import Result from './components/Result'
+import './App.css'
 
 const numbers = () => {
     console.log('test')
@@ -16,14 +17,10 @@ const App = () => {
         <div className="numbers">
             <Button text="1" buttonType="test" clickHandler={numbers}/>
         </div>
-        <div className="functions">
-            <button>
-                clear
-            </button>
-            <button>
-                r
-            </button>   
-        </div>
+        <Functions
+            onContentClear={(operation) => console.log('clear', operation)}
+            onDelete={(operation => console.log('delete', operation))}
+        />
         <MathOperation
             onClickOperation={(operation) => console.log('operation', operation)}
             onClickEqual={(equal) => console.log('equal', equal)}
