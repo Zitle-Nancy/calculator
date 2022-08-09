@@ -1,4 +1,6 @@
 import PropTypes  from "react";
+import './Button.css';
+
 const Button = ({buttonType ,text, clickHandler}) => {
   return(
     <button className={buttonType} onClick={() => clickHandler(text)}>
