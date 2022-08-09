@@ -26,7 +26,7 @@ const App = () => {
         </div>
         <MathOperation
             onClickOperation={(operation) => console.log('operation', operation)}
-            onClickEqual={() => ""}
+            onClickEqual={(equal) => console.log('equal', equal)}
         />        
     </main>)
 }
