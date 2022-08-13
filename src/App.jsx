@@ -16,8 +16,6 @@ const App = () => {
     const item = items.length ? items[items.length -1] : '0'
 
     const onDelete = (value) => {
-        debugger
-        console.log(value.length, 'delete')
         const length = value.length;
         if(length) {
             // let'go delete one by one element
