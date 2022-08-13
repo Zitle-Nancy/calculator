@@ -14,14 +14,13 @@ const App = () => {
     const regexGetOnlyNumbers = /[^-^+^*^/]+/g;
     const items = words(stack,regexGetOnlyNumbers);
     const item = items.length ? items[items.length -1] : '0'
-    console.log(item, 'item')
-    // @TODO revisar como esta funcionando
-    // console.log(items, 'itmers')
-    // console.log(items[items.length -1], 'quitando menos 1', items)
+
     const onDelete = (value) => {
+        debugger
+        console.log(value.length, 'delete')
         const length = value.length;
-        // length > 0 antes estaba
         if(length) {
+            // let'go delete one by one element
             const newValue = value.substring(0, length - 1);
             setStack(newValue)
         }
@@ -39,7 +38,7 @@ const App = () => {
             />
             <MathOperation
                 onClickOperation={(operation) => setStack(`${stack}${operation}`)}
-                onClickEqual={(equal) => setStack(eval(stack) + '')}
+                onClickEqual={() => setStack(eval(stack) + '')}
             />        
         </main>
     )
