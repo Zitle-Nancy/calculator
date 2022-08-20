@@ -10,9 +10,9 @@ const Button = ({buttonType ,text, clickHandler}) => {
 }
 
 Button.propTypes = {
-  type: PropTypes.string, // este debería ser requerido
-  text: PropTypes.string, // revisar los errores
-  clickHandler: PropTypes.func // da error al poner required
+  type: PropTypes.string,
+  text: PropTypes.string,
+  clickHandler: PropTypes.func
 }
 
 export default Button;
